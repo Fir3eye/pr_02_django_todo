@@ -48,9 +48,9 @@ pipeline {
 
     environment {
         SSH_CREDENTIALS = credentials('ssh-agent')
-        REMOTE_SERVER = 'ubuntu@remote-ip'
+        REMOTE_SERVER = 'ubuntu@18.118.195.23'
         REMOTE_PATH = '/var/www/html'
-        LOCAL_PATH = './root/pr_02_django_todo'
+        LOCAL_PATH = './var/lib/jenkins/workspace/ss'
     }
 
     stages {
@@ -85,6 +85,7 @@ pipeline {
         }
     }
 }
+
 
 
 ```
