@@ -47,7 +47,7 @@ pipeline {
     agent any
 
     environment {
-        SSH_CREDENTIALS = credentials('ssh-agent')
+        SSH_CREDENTIALS = credentials('18.118.195.23')
         REMOTE_SERVER = 'ubuntu@18.118.195.23'
         REMOTE_PATH = '/var/www/html'
         LOCAL_PATH = './var/lib/jenkins/workspace/ss'
@@ -57,7 +57,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'sudo apt install apache2'
+                    mkdir newwww
                 }
             }
         }
@@ -85,6 +85,8 @@ pipeline {
         }
     }
 }
+
+
 
 
 
