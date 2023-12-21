@@ -50,7 +50,7 @@ pipeline {
         SSH_CREDENTIALS = credentials('ssh-agent')
         REMOTE_SERVER = 'ubuntu@remote-ip'
         REMOTE_PATH = '/var/www/html'
-        LOCAL_PATH = './home/ubuntu/test'
+        LOCAL_PATH = './root/pr_02_django_todo'
     }
 
     stages {
